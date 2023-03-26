@@ -1,0 +1,114 @@
+#chat::-webkit-scrollbar {
+    width: 5px;
+}
+
+#chat::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #248bf5;
+}
+
+#chat{
+    background-color: #fff;
+    border: 1px solid #e5e5ea;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    padding: 0.5rem 1.5rem;
+    height:400px;
+    overflow: auto;
+}
+
+.chatBubble{
+    margin: 5px 0;
+    border-radius: 1.15rem;
+    line-height: 1.25;
+    max-width: 75%;
+    padding: 0.5rem .875rem;
+    position: relative;
+    word-wrap: break-word;
+}
+.chatBubble:before,
+.chatBubble:after{
+    bottom: -0.1rem;
+    content: "";
+    height: 1rem;
+    position: absolute;
+}
+
+.from-me .nickName{
+    display: none;
+}
+
+.from-me {
+    align-self: flex-end;
+    background-color: #248bf5;
+    color: #fff;
+}
+
+.from-me::before {
+    border-bottom-left-radius: 0.8rem 0.7rem;
+    border-right: 1rem solid #248bf5;
+    right: -0.35rem;
+    transform: translate(0, -0.1rem);
+}
+
+.from-me::after {
+    background-color: #fff;
+    border-bottom-left-radius: 0.5rem;
+    right: -40px;
+    transform:translate(-30px, -2px);
+    width: 10px;
+}
+
+article[class^="from-"] {
+    margin: 0.5rem 0;
+    width: fit-content;
+}
+
+.from-me ~ .from-me {
+    margin: 0.25rem 0 0;
+}
+
+.from-me ~ .from-me:not(:last-child) {
+    margin: 0.25rem 0 0;
+}
+
+.from-me ~ .from-me:last-child {
+    margin-bottom: 0.5rem;
+}
+
+.from-them .nickName{
+    font-size: .5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.from-them {
+    align-items: flex-start;
+    background-color: #e5e5ea;
+    color: #000;
+}
+
+.from-them:before {
+    border-bottom-right-radius: 0.8rem 0.7rem;
+    border-left: 1rem solid #e5e5ea;
+    left: -0.35rem;
+    transform: translate(0, -0.1rem);
+}
+
+.from-them::after {
+    background-color: #fff;
+    border-bottom-right-radius: 0.5rem;
+    left: 20px;
+    transform: translate(-30px, -2px);
+    width: 10px;
+}
