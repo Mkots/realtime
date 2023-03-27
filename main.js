@@ -5,7 +5,7 @@ import {$} from "./src/selector.js";
 import {renderMessage} from "./src/renderMessage.js";
 
 const nc = await connect({
-    servers:["ws://127.0.0.1:8080"]
+    servers:[`wss://${process.env.DOMAIN_NAME}:8080/ws`]
 });
 const sc = StringCodec();
 const me = uuid();
