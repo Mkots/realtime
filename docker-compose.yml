@@ -10,5 +10,3 @@ services:
       - "./container:/container"
       - "/etc/letsencrypt:/etc/letsencrypt"
     entrypoint: /container/entrypoint.sh
-    environment:
-      - DOMAIN_NAME

@@ -2,3 +2,5 @@
 node_modules/
 dist/
 log
+container/nats.conf
+container/.env
