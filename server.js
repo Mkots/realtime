@@ -2,7 +2,7 @@ import { WebSocketServer } from 'ws';
 import {v4 as uuid} from "uuid";
 import {writeFile} from 'fs';
 
-const wss = new WebSocketServer({port: 8000});
+const wss = new WebSocketServer({port: 8080});
 const clients = {};
 const messages = [];
 
