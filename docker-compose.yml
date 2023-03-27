@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nats:
+    build: .
+    container_name: nats
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./container:/container"
+      - "/etc/letsencrypt:/etc/letsencrypt"
+    entrypoint: /container/entrypoint.sh
